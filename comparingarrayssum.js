@@ -9,17 +9,17 @@ rl.on('line', (line) => {
   input.push(line);
 });
 rl.on('close', () => {
-  let n = parseInt(input[o]);
+  let n = parseInt(input[0]);
   let arrA = input[1].split(' ').map(Number);
   let m = parseInt(input[2]);
   let arrB = input[3].split(' ').map(Number);
   console.log(arrayproblem(arrA,arrB));
 });
 function arrayproblem(arrA, arrB){
-  let sumA = 0, sumB =0;
+  let sumA = 0, sumB = 0;
   for(let i = 0; i<arrA.length; i++){
     sumA += arrA[i];
-    sumb += arrB[i];
+    sumB += arrB[i];
   }
   if(sumA > sumB){
     return 'first array is larger';
