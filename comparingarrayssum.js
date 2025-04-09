@@ -8,13 +8,12 @@ let input =[];
 rl.on('line', (line) => {
   input.push(line);
 });
-rl.on('', n => {
+rl.on('close', () => {
   let n = parseInt(input[o]);
-  let arrA = input[1].split('').map(Number);
+  let arrA = input[1].split(' ').map(Number);
   let m = parseInt(input[2]);
-  let arrB = input[3].split('').map(Number);
+  let arrB = input[3].split(' ').map(Number);
   console.log(arrayproblem(arrA,arrB));
-  readline.close();
 });
 function arrayproblem(arrA, arrB){
   let sumA = 0, sumB =0;
